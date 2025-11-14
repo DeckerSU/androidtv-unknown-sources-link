@@ -31,6 +31,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         
+        // Setup clickable links
+        TextView redditLink = findViewById(R.id.reddit_link);
+        redditLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openUrl("https://www.reddit.com/r/MiBox/comments/1mx3tde/how_to_sideload_apps_on_3rd_gen_mi_box/");
+            }
+        });
+        
+        TextView githubLink = findViewById(R.id.github_link);
+        githubLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openUrl("https://github.com/DeckerSU");
+            }
+        });
+        
         // Make button focusable for TV remote
         openSettingsButton.requestFocus();
     }
@@ -140,6 +157,16 @@ public class MainActivity extends AppCompatActivity {
             } catch (Exception e) {
                 Log.e(TAG, "Failed to open any settings", e);
             }
+        }
+    }
+    
+    private void openUrl(String url) {
+        try {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+        } catch (Exception e) {
+            Log.e(TAG, "Failed to open URL: " + url, e);
         }
     }
 }
