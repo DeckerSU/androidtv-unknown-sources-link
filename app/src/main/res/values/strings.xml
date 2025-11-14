@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Unknown Sources Link</string>
+    <string name="app_description">This app is designed for Android TV devices where the menu Settings > Apps &amp; notifications > Advanced > Special access > Install unknown apps is missing by default.\n\nThis option is crucial for security settings, as other apps can enable it, and users might accidentally grant permissions to an app without being able to disable it later.\n\nThis issue is particularly common on devices like the 3rd Gen MI Box.</string>
+    <string name="open_install_unknown_apps">Open Install Unknown Apps Settings</string>
+    <string name="links_info">Reddit Discussion: https://www.reddit.com/r/MiBox/comments/1mx3tde/how_to_sideload_apps_on_3rd_gen_mi_box/\n\nDeveloper GitHub: https://github.com/DeckerSU</string>
 </resources>
 

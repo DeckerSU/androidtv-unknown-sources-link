@@ -1,10 +1,14 @@
 package im.decker.unknown.sources.link;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -13,11 +17,59 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
         
-        openInstallUnknownAppsSettings();
+        // Setup device info
+        setupDeviceInfo();
         
-        // Close the app after opening settings
-        finish();
+        // Setup button
+        Button openSettingsButton = findViewById(R.id.open_settings_button);
+        openSettingsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openInstallUnknownAppsSettings();
+            }
+        });
+        
+        // Make button focusable for TV remote
+        openSettingsButton.requestFocus();
+    }
+
+    private void setupDeviceInfo() {
+        TextView deviceInfoText = findViewById(R.id.device_info_text);
+        
+        StringBuilder deviceInfo = new StringBuilder();
+        deviceInfo.append("Device Information:\n\n");
+        
+        // Android Version
+        deviceInfo.append("Android Version: ").append(Build.VERSION.RELEASE).append("\n");
+        deviceInfo.append("SDK Level: ").append(Build.VERSION.SDK_INT).append("\n");
+        
+        // Device Model
+        deviceInfo.append("Device Model: ").append(Build.MODEL).append("\n");
+        deviceInfo.append("Manufacturer: ").append(Build.MANUFACTURER).append("\n");
+        deviceInfo.append("Brand: ").append(Build.BRAND).append("\n");
+        
+        // Device Info
+        if (Build.DEVICE != null) {
+            deviceInfo.append("Device: ").append(Build.DEVICE).append("\n");
+        }
+        if (Build.PRODUCT != null) {
+            deviceInfo.append("Product: ").append(Build.PRODUCT).append("\n");
+        }
+        if (Build.HARDWARE != null) {
+            deviceInfo.append("Hardware: ").append(Build.HARDWARE).append("\n");
+        }
+        
+        // Build Info
+        if (Build.ID != null) {
+            deviceInfo.append("Build ID: ").append(Build.ID).append("\n");
+        }
+        if (Build.FINGERPRINT != null) {
+            deviceInfo.append("Fingerprint: ").append(Build.FINGERPRINT).append("\n");
+        }
+        
+        deviceInfoText.setText(deviceInfo.toString());
     }
 
     private void openInstallUnknownAppsSettings() {
@@ -91,4 +143,3 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
-
