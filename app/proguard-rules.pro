@@ -3,5 +3,5 @@
 # proguardFiles setting in build.gradle.
 
 # Keep MainActivity
--keep class com.unknownsources.link.MainActivity { *; }
+-keep class im.decker.unknown.sources.link.MainActivity { *; }
 

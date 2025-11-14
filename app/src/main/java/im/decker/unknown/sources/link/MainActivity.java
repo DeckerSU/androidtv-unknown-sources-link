@@ -1,4 +1,4 @@
-package com.unknownsources.link;
+package im.decker.unknown.sources.link;
 
 import android.content.Intent;
 import android.os.Build;

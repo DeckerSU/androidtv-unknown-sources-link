@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.unknownsources.link'
+    namespace 'im.decker.unknown.sources.link'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.unknownsources.link"
+        applicationId "im.decker.unknown.sources.link"
         minSdk 23
         targetSdk 34
         versionCode 1
