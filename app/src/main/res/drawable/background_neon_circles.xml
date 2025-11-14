@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Base dark background -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#0A0A0A" />
+        </shape>
+    </item>
+    
+    <!-- Concentric neon circles radiating from center -->
+    <!-- Outer circle (largest) - purple/blue gradient -->
+    <item>
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:centerX="50%"
+                android:centerY="50%"
+                android:gradientRadius="80%"
+                android:startColor="#330066"
+                android:centerColor="#1A0033"
+                android:endColor="#000000" />
+        </shape>
+    </item>
+    
+    <!-- Second circle -->
+    <item android:top="100dp" android:bottom="100dp" android:left="100dp" android:right="100dp">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:centerX="50%"
+                android:centerY="50%"
+                android:gradientRadius="100%"
+                android:startColor="#4D0099"
+                android:centerColor="#2D0066"
+                android:endColor="#1A0033" />
+        </shape>
+    </item>
+    
+    <!-- Third circle -->
+    <item android:top="200dp" android:bottom="200dp" android:left="200dp" android:right="200dp">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:centerX="50%"
+                android:centerY="50%"
+                android:gradientRadius="100%"
+                android:startColor="#6600CC"
+                android:centerColor="#400099"
+                android:endColor="#2D0066" />
+        </shape>
+    </item>
+    
+    <!-- Fourth circle -->
+    <item android:top="300dp" android:bottom="300dp" android:left="300dp" android:right="300dp">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:centerX="50%"
+                android:centerY="50%"
+                android:gradientRadius="100%"
+                android:startColor="#8000FF"
+                android:centerColor="#5500CC"
+                android:endColor="#400099" />
+        </shape>
+    </item>
+    
+    <!-- Fifth circle -->
+    <item android:top="400dp" android:bottom="400dp" android:left="400dp" android:right="400dp">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:centerX="50%"
+                android:centerY="50%"
+                android:gradientRadius="100%"
+                android:startColor="#9933FF"
+                android:centerColor="#6B1AFF"
+                android:endColor="#5500CC" />
+        </shape>
+    </item>
+    
+    <!-- Center circle (smallest) - brightest -->
+    <item android:top="500dp" android:bottom="500dp" android:left="500dp" android:right="500dp">
+        <shape android:shape="oval">
+            <gradient
+                android:type="radial"
+                android:centerX="50%"
+                android:centerY="50%"
+                android:gradientRadius="100%"
+                android:startColor="#B366FF"
+                android:centerColor="#8C4DFF"
+                android:endColor="#6B1AFF" />
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    
+    <!-- Door frame -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M8,4 L40,4 L40,44 L8,44 Z"/>
+    
+    <!-- Door -->
+    <path
+        android:fillColor="#424242"
+        android:pathData="M10,6 L38,6 L38,42 L10,42 Z"/>
+    
+    <!-- Door handle (circle) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M32,24 A2,2 0 1,1 36,24 A2,2 0 1,1 32,24 Z"/>
+    
+    <!-- Exit arrow pointing right -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M42,24 L38,20 L38,22 L34,22 L34,26 L38,26 L38,28 Z"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M38,22 L42,24 L38,26 Z"/>
+</vector>

@@ -8,6 +8,7 @@ import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -45,6 +46,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 openUrl("https://github.com/DeckerSU");
+            }
+        });
+        
+        // Setup exit button
+        ImageButton exitButton = findViewById(R.id.exit_button);
+        exitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
         
